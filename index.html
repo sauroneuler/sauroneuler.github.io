@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Set the theme before first paint to avoid a flash of the wrong mode
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -21,6 +29,7 @@
       <a href="#talks">Talks &amp; Posters</a>
       <a href="#teaching">Teaching &amp; Outreach</a>
       <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
     </div>
   </nav>
 </header>
@@ -180,6 +189,22 @@
 <footer class="site-footer">
   <p>© 2026 Frida Fernanda García López · Built with GitHub Pages</p>
 </footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById("theme-toggle");
+    function syncIcon() {
+      btn.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+    }
+    btn.addEventListener("click", function () {
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      syncIcon();
+    });
+    syncIcon();
+  })();
+</script>
 
 </body>
 </html>
