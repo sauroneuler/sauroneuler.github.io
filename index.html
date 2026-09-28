@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F. Fernanda García L. — Condensed Matter Theory</title>
-  <meta name="description" content="F. Fernanda García L. — PhD student in condensed matter theory at Universidad de Chile. Non-Hermitian Hamiltonians, topology, chiral phonons.">
+  <title>F. Fernanda Garc&iacute;a L. &mdash; Condensed Matter Theory</title>
+  <meta name="description" content="F. Fernanda Garcia L. - PhD student in condensed matter theory at Universidad de Chile. Non-Hermitian Hamiltonians, topology, chiral phonons.">
+  <link rel="alternate" hreflang="en" href="https://sauroneuler.github.io/index.html">
+  <link rel="alternate" hreflang="es" href="https://sauroneuler.github.io/index.es.html">
+  <link rel="alternate" hreflang="fr" href="https://sauroneuler.github.io/index.fr.html">
+  <link rel="alternate" hreflang="x-default" href="https://sauroneuler.github.io/index.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9883;</text></svg>">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script>
     // Set the theme before first paint to avoid a flash of the wrong mode
     (function () {
@@ -23,19 +27,26 @@
 
 <header class="site-header">
   <nav class="nav">
-    <span class="nav-name">F. Fernanda García L.</span>
+    <span class="nav-name">F. Fernanda Garc&iacute;a L.</span>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
+      <a href="#interests">Interests</a>
       <a href="#talks">Talks &amp; Posters</a>
       <a href="#teaching">Teaching &amp; Outreach</a>
       <a href="#contact">Contact</a>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      <span class="lang-switch">
+        <a href="index.html" aria-current="page">EN</a>
+        <a href="index.es.html">ES</a>
+        <a href="index.fr.html">FR</a>
+      </span>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
     </div>
   </nav>
 </header>
 
 <main>
+
 
   <!-- Hero -->
   <section class="hero" id="about">
@@ -103,6 +114,27 @@
     </p>
     <h3 class="subheading">Publications</h3>
     <p>One manuscript in preparation on electron–chiral-phonon hybridization in helical chains.</p>
+  </section>
+
+
+  <!-- Interests -->
+  <section class="section" id="interests">
+    <h2>Interests</h2>
+    <p>
+      Topics I work on or am moving toward, and the questions that keep me reading.
+    </p>
+    <ul class="plain-list">
+      <li><strong>Information theory</strong> &mdash; entropy, channel capacity, and how information is
+          encoded, transmitted and lost in physical systems.</li>
+      <li><strong>Artificial intelligence</strong> &mdash; machine-learning methods as instruments for
+          physics, and the physics of systems that learn.</li>
+      <li><strong>Non-reciprocal phenomena</strong> &mdash; transport that is not symmetric under
+          exchanging source and drain, and the symmetries that forbid or permit it.</li>
+      <li><strong>Chiral phonons</strong> &mdash; lattice vibrations carrying a well-defined rotational
+          sense and a pseudo-angular momentum.</li>
+      <li><strong>Non-Hermitian Hamiltonians</strong> &mdash; open and driven systems whose effective
+          dynamics is not Hermitian, and the topology that emerges there.</li>
+    </ul>
   </section>
 
   <!-- Talks & Posters -->
@@ -187,17 +219,18 @@
     </p>
   </section>
 
+
 </main>
 
 <footer class="site-footer">
-  <p>© 2026 F. Fernanda García L. · Built with GitHub Pages</p>
+  <p>&copy; 2026 F. Fernanda Garc&iacute;a L. &middot; Built with GitHub Pages</p>
 </footer>
 
 <script>
   (function () {
     var btn = document.getElementById("theme-toggle");
     function syncIcon() {
-      btn.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+      btn.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "\u2600\uFE0F" : "\uD83C\uDF19";
     }
     btn.addEventListener("click", function () {
       var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";

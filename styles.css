@@ -301,3 +301,21 @@ body {
 
   .cards { grid-template-columns: 1fr; }
 }
+
+/* ---------- Selector de idioma ---------- */
+.lang-switch {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--rule, rgba(128,128,128,0.35));
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+.lang-switch a { font-size: 0.78rem; opacity: 0.55; }
+.lang-switch a:hover { opacity: 0.9; }
+.lang-switch a[aria-current="page"] {
+  opacity: 1;
+  font-weight: 600;
+  color: var(--accent-light);
+}
